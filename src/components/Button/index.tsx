@@ -12,7 +12,7 @@ const Button: React.FC<ComponentProps> = ({children, onClick, type, className}) 
         <button 
         type={type} 
         onClick={onClick} 
-        className={`border text-xl w-1/2 mx-auto font-semibold rounded-lg p-2 ${className}`} 
+        className={`border text-xl w-1/2 mx-auto bg-primary font-semibold rounded-lg p-2 ${className}`} 
         >
             {children}
         </button>
