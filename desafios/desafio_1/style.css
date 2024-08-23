@@ -1,0 +1,174 @@
+/* SELECTORES DE ETIQUETAS */
+
+body {
+    font-family: sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+li {
+    border: 2px solid #00aaff;
+    padding: 1rem;
+    list-style-type: none;
+    border-radius: 8px;
+    background-color: #e6f7ff;
+    color: #0056b3;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* SELECTORES DE IDS */
+
+#main-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    width: 90vw;
+    height: 85vh;
+}
+
+/* SELECTORES DE CLASES */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-section {
+    width: 50%;
+    height: auto;
+    background-color: #b3d9ff;
+    padding: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0099ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #007acc;
+    transform: scale(1.05);
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.9rem;
+    background-color: #007bff;
+    color: #0056b3;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.footer a:hover {
+    background-color: #b3d9ff;
+    color: #0056b3;
+}
+
+/* DISEÑO RESPONSIVE */
+
+/* DISPOSITIVOS GRANDES */
+@media (max-width: 1200px) {
+    #main-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 8px 15px;
+    }
+
+    .article-section {
+        width: 70%;
+    }
+}
+
+/* DISPOSITIVOS PEQUEÑOS */
+@media (max-width: 768px) {
+    #main-section {
+        grid-template-columns: 1fr;
+        width: 95vw;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .article-section {
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer a {
+        margin: 10px 0;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
