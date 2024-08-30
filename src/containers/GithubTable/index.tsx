@@ -6,13 +6,14 @@ import Button from '@/components/Button';
 
 const Index = () => {
     const [users, setUsers] = React.useState<any>([]);
+    const [warning, setWarning] = React.useState<boolean>(false);
     const [query, setQuery] = React.useState<string>('');
 
     const filterUsers = async () => {
         try {
             await axios.get(`https://api.github.com/search/users?q=${query}`)
                 .then((response: any) => setUsers(response.data.items))
-                .catch((fail) => console.error(fail));
+                .catch(() => setWarning(true));
         } catch (err) {
             console.error(err);
         }
@@ -52,6 +53,7 @@ const Index = () => {
                             </td>
                         </tr>
                     ))}
+                    { warning && <p className='text-red-500'> Error al encontrar un usuario con el nombre {query} </p> }
                 </tbody>
             </table>
         </div>
